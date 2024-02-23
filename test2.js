@@ -1,3 +1,3 @@
 const user='uid'
-const user2="yud1"
+const user2
 console.log(user+user2);
