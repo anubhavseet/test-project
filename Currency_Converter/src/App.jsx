@@ -41,7 +41,7 @@ function App() {
                             label="From"
                             amount={amount}
                             currencyoption={options}
-                            onCurrencyChange={(currency)=>setamount(amount)}
+                            onCurrencyChange={(amount)=>setfrom(amount)}
                             selectcurrency={from}
                             onAmountChange={(amount)=>setamount(amount)}
 
@@ -67,7 +67,7 @@ function App() {
 
                         />
                     </div>
-                    <button type="submit" className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg">
+                    <button type="submit" className="w-full bg-gray-700 hover:bg-slate-400 text-white px-4 py-3 rounded-lg">
                         Convert {from.toUpperCase()} to {to.toUpperCase()}
                     </button>
                 </form>
