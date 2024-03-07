@@ -1,42 +1,40 @@
 import React, { useEffect, useState } from 'react';
 
-import axios from 'axios';
+import Productlist from './ProductData';
 const Productlisting = () => 
 {
-    const [products, setProducts] = useState([]);
+    const [product, setProducts] = useState([]);
 
-            const axios = axios
+    useEffect(()=>{
 
-            const options = {
-              method: 'GET',
-              url: 'https://shoes-collections.p.rapidapi.com/shoes',
-              headers: {
-                'X-RapidAPI-Key': '17ee4b7483mshd43c9abd6fee4cfp1033dbjsn13ce8a750095',
-                'X-RapidAPI-Host': 'shoes-collections.p.rapidapi.com'
-              }
-            };
+      setProducts(Productlist)
+      console.log(product)
 
-            const fetchData = useEffect(async () => {
-              try {
-                const response = await axios.request(options);
-                //console.log(response.data);
-                setProducts(response.data)
-              } catch (error) {
-                console.error(error);
-              }
-            },[])
-            fetchData();
+    },[])
+     
 
               return (
-                <div>
-                  {products.map(product => (
-                    <div key={product.id}>
-                      <h2>{product.name}</h2>
-                      <p>{product.description}</p>
-                      <p>{product.price}</p>
+                <div className="flex flex-wrap">
+                {product.map((product) => (
+                  <div
+                    key={product.id}
+                    className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 p-4"
+                  >
+                    <div className=" bg-white hover:shadow-inherit rounded-3xl p-4">
+                      <h2 className="text-lg font-semibold">{product.name}</h2>
+                      <img
+                        src={product.image}
+                        alt={product.name}
+                        className="w-full h-auto mt-2"
+                      />
+                      <p className="text-gray-600 mt-2"></p>
+                      <p className="text-green-600 font-semibold mt-2">
+                        ${product.price}
+                      </p>
                     </div>
-                  ))}
-                </div>
+                  </div>
+                ))}
+              </div>
               );
   };
 
