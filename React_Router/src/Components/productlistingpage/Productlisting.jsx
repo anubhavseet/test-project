@@ -43,7 +43,7 @@ const Productlisting = () =>
                       />
                       <p className="text-gray-600 mt-2"></p>
                     
-                      <button className="text-green-600  hover:bg-red-300 rounded-md hover:text-gray-950 hover:text-xs  font-bold mt-2"
+                      <button key={product.id} className="text-green-600  hover:bg-red-300 rounded-md hover:text-gray-950 hover:text-xs  font-bold mt-2"
                        onClick={handleBuyNowClick} 
                        
                       >
