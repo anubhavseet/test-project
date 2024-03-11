@@ -8,7 +8,7 @@ export default function Header() {
 
         
         <header className="shadow sticky z-50 top-0">
-            <nav className=" bg-red-200 border-gray-200 px-4 lg:px-6 py-2.5 rounded-3xl">
+            <nav className="  bg-slate-500 hover:bg-opacity-50 border-gray-200 px-4 lg:px-6 py-2.5 rounded-3xl">
                 <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
                     <Link to="/" className="flex items-center  ">
                         <img
@@ -85,6 +85,18 @@ export default function Header() {
                                     }
                                 >
                                   Contact Us
+                                </NavLink>
+                                
+                             
+                            </li>
+                            <li>
+                                <NavLink to="/productpage"
+                                
+                                    className={({isActive}) =>
+                                        `block py-2 pr-4 pl-3 duration-200${ isActive ?"  text-orange-700":"text-black"} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
+                                    }
+                                >
+                             productpage
                                 </NavLink>
                                 
                              

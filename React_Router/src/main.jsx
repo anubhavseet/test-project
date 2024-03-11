@@ -9,6 +9,8 @@ import ContactUS from './Components/ContactUS.jsx'
 import Login from './Components/Login.jsx'
 import Signup from './Components/Signup.jsx'
 import Productlisting from './Components/productlistingpage/Productlisting.jsx'
+import Productpage from './Components/productlistingpage/Productpage.jsx'
+import ProductDetail from './Components/ProductDetail.jsx'
 
 
 const router = createBrowserRouter([
@@ -38,8 +40,21 @@ const router = createBrowserRouter([
       },
       {
         path:"men",
-        element:<Productlisting/>
+        element:<Productlisting/>,
+        children:[
+          {
+         path:"ProductDetail",
+         element:<ProductDetail/>
+          }
+        ]
+       
+        
+      },
+      { path:"productpage",
+      element:<Productpage/>
       }
+     
+     
     ]
     }
 
