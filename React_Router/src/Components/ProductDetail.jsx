@@ -1,11 +1,14 @@
 
 import React from 'react'
-
-function ProductDetail({prop}) {
-    console.log(prop)
-
+import { useContext } from 'react'
+import ProductContext from '../Context/ProductContext'
+function ProductDetail() {
+    
+  const {Productlist} = useContext(ProductContext)
   return (
-    <div>ProductDetail</div>
+    <div>ProductDetail
+      {Productlist}
+    </div>
   )
 }
 
