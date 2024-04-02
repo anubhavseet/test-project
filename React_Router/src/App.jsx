@@ -6,13 +6,14 @@ import Footer from './Components/Footer'
 import Home from './Components/Home'
 import { Outlet } from 'react-router-dom'
 import ProductContextProvider from './Context/ProductContextProvider'
+import { Children } from 'react'
 
 
 function App() {
   //const [count, setCount] = useState(0)
 
   return (
-    <ProductContextProvider>
+    <ProductContextProvider value={Children}>
       
       <Header/>
       <Outlet/>

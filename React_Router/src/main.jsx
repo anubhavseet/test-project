@@ -11,6 +11,7 @@ import Signup from './Components/Signup.jsx'
 import Productlisting from './Components/productlistingpage/Productlisting.jsx'
 import Productpage from './Components/productlistingpage/Productpage.jsx'
 import ProductDetail from './Components/ProductDetail.jsx'
+import Cart from './Components/Cart.jsx'
 
 
 const router = createBrowserRouter([
@@ -41,17 +42,17 @@ const router = createBrowserRouter([
       {
         path:"men",
         element:<Productlisting/>,
-        children:[
-          {
-         path:"ProductDetail",
-         element:<ProductDetail/>
-          }
-        ]
+      
        
         
       },
-      { path:"productpage",
-      element:<Productpage/>
+      { 
+        path:"/product/:id",
+        element:<ProductDetail/>
+      },
+      {
+        path:"/cart/:id",
+        element:<Cart/>
       }
      
      
@@ -62,7 +63,7 @@ const router = createBrowserRouter([
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode >
+  
     <RouterProvider  router={router} />
-  </React.StrictMode>,
+  ,
 )
