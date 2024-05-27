@@ -269,7 +269,26 @@
             description: "MJ's sixth signature shoe debuted during the 1990-1991 season as His Airness battled rivals in pursuit of an elusive first championship. Now, it's back in a variety of color schemes. Gear up for the 30th anniversary of the Air Jordan 6 with this timeless classic.",
             quantity: 1,
             rating: { rate: 4.7, count: 130 }
+          },
+          {
+            id: 32,
+            name: "Nike Air Max 270",
+            price: 150.00,
+            image: "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/air-max-270-mens-shoes-KkLcGR.png",
+            description: "The Nike Air Max 270 combines the exaggerated tongue from the Air Max 180 and classic elements from the Air Max 93. It features Nike's biggest heel Air unit yet for a super-soft ride that feels as impossible as it looks.",
+            quantity: 1,
+            rating: { "rate": 4.5, "count": 215 }
+          },
+          {
+            id: 33,
+            name: "Adidas Ultraboost 21",
+            price: 180.00,
+            image: "https://assets.adidas.com/images/w_600,f_auto,q_auto/air-ultraboost-21-mens-running-shoes.png",
+            description: "A new day. A new run. Make it your best. These high-performance shoes feature a foot-hugging knit upper. Stitched-in reinforcement is precisely placed to give you support in the places you need it most. The soft elastane heel delivers a more comfortable fit. Responsive cushioning returns energy to your stride with every footstrike for that I-could-run-forever feeling.",
+            quantity: 1,
+            rating: { "rate": 4.7, "count": 330 }
           }
+          
         ]
 
   export default Productlist
